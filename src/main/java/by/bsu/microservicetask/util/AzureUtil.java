@@ -1,4 +1,4 @@
-package by.bsu.microservicetask.consuming.util;
+package by.bsu.microservicetask.util;
 
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -14,12 +14,12 @@ import java.io.IOException;
  * Creates HTTP Client for sending
  * http-requests to Azure function
  */
-public class AzureUtil {
+class AzureUtil {
     private static final Logger LOGGER = Logger.getLogger(FileUtil.class);
     private static final String FUNCTION_URL =
             "https://lambdataskbuklis.azurewebsites.net/api/HttpTriggerJS1?code=SZDJVQIg/cgOGIROJ8g18sDZE0gSqZBamxSuK21VCqmAfrrYVps2mg==";
 
-    public static String sendRequestToAzure(String data){
+    static String sendRequestToAzure(String data){
         String responseBody = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();

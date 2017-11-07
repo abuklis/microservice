@@ -19,7 +19,7 @@ public class JobPublisher {
     private static final String JOB_NAME = "rabbitmq";
     private static final String TRIGGER_NAME = "trigger";
 
-    public static void main(String[] args) throws IOException, TimeoutException {
+    public static void doScheduledPublish() {
         try{
             Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
 

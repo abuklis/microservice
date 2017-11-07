@@ -1,8 +1,5 @@
-package by.bsu.microservicetask.consuming;
+package by.bsu.microservicetask.util;
 
-import by.bsu.microservicetask.consuming.util.AzureUtil;
-import by.bsu.microservicetask.consuming.util.FileUtil;
-import by.bsu.microservicetask.consuming.util.JsonUtil;
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DefaultConsumer;
@@ -18,6 +15,7 @@ import java.io.IOException;
  * sends it to Azure Lambda,
  * saves result into file
  */
+
 public class CustomConsumer extends DefaultConsumer {
     private static final Logger LOGGER = Logger.getLogger(CustomConsumer.class);
     private static final String CHARSET = "UTF-8";
